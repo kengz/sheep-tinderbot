@@ -1,0 +1,26 @@
+{
+  "name": "sherrys-tinderbot",
+  "version": "1.0.0",
+  "description": "tinder scraper for Sherry",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kengz/sherrys-tinderbot.git"
+  },
+  "keywords": [
+    "tinder",
+    "bot"
+  ],
+  "author": "kengz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kengz/sherrys-tinderbot/issues"
+  },
+  "homepage": "https://github.com/kengz/sherrys-tinderbot#readme",
+  "dependencies": {
+    "tinderjs": "^1.0.8"
+  }
+}
