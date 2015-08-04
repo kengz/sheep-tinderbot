@@ -27,4 +27,6 @@ Now you're ready to use it. This depends on `tinderjs`, see the [full API docs h
 
 I've tried to automate the process of obtaining the tokens with requestJS, selenium, webdriveio, to no avail, and it simply isn't worth the trouble. For now doing them manually is the best.
 
+This is why you're seeing only the very minimal `index.js`. I've removed all the useless test code.
+
 Also you can keep searching around for a better library. Tinder doesn't have an official API, and the dependency of this project is due to a guy who figured out the private API that Tinder uses internally.
