@@ -1,32 +1,60 @@
 # Sherry's-tinderbot
 A tinder bot for Sherry. Just for fun.
 
-## Usage
-Firstly, I suppose you're familiar with Node, NPM and git.
+## Installation
+Make sure you have Node, npm and git installed.
 
-FB has a shitty API, so developing with it is a pain in the ass. To use/extend this project, see inside `index.js`, and there are **two tokens** you need for each distinct user. Moreover, everytime when the user opens up Tinder elsewhere, the first token is reset, so you have to reobtain it.
+Clone this git repo:
 
-You have to obtain these tokens manually from a browser, because FB is jackass and there is currently no way to obtain them programmatically.
+```
+git clone <the-url-of-this-repo>
+```
 
-#### 1. Tinder access token from FB: 
-Get the user to sign in to fb, and go to this page:
+Next, install the dependencies:
+
+```
+npm install
+```
+
+Then [setup](#setup) and [use](#use).
+
+## <a name="setup"></a>Setup
+FB has a shitty API, so you need to obtain the 2 access tokens from your browser - make sure it's logged in to your FB. There is currently no way to obtain them programmatically.
+
+Also, the first token is reset whenever you opens up your Tinder app elsewhere, so you must reobtain it.
+
+
+#### 1. Your FB id: Kudos to FB, even getting your userid is hard
+go to this page, and paste in the link to your profile url
+http://findmyfbid.com
+then paste the id into the `env` file.
+
+#### 2. Tinder access token from FB: 
+Sign in to your FB, and go to this url:
 
 https://www.facebook.com/dialog/oauth?client_id=464891386855067&redirect_uri=https://www.facebook.com/connect/login_success.html&scope=basic_info,email,public_profile,user_about_me,user_activities,user_birthday,user_education_history,user_friends,user_interests,user_likes,user_location,user_photos,user_relationship_details&response_type=token
 
-Then quicky copy the first redirected link to `redirectUrl`.
+Then quicky copy the first (on success) redirected url and paste into `env`.
 
-#### 2. your FB id: Kudos to FB, even getting your userid is hard
-go to this page, and paste in the link to your profile url
-http://findmyfbid.com
-then paste the id to `FBuserid`.
+## <a name="use"></a>Use
+Fire up the terminal at the project root directory, do
 
-Now you're ready to use it. This depends on `tinderjs`, see the [full API docs here](https://github.com/alkawryk/tinderjs).
+```
+npm start
+```
+
+Then check `data/dump.json` for output.
 
 
 ## Roadmap
+- search function for the dumped data
+- scraper for images
+
+
+## Developer
+This cray depends on `tinderjs`, see the [full API docs here](https://github.com/alkawryk/tinderjs).
 
 I've tried to automate the process of obtaining the tokens with requestJS, selenium, webdriveio, to no avail, and it simply isn't worth the trouble. For now doing them manually is the best.
 
-This is why you're seeing only the very minimal `index.js`. I've removed all the useless test code.
+This is why you're seeing only the very minimal `app.js`. I've removed all the useless test code.
 
-Also you can keep searching around for a better library. Tinder doesn't have an official API, and the dependency of this project is due to a guy who figured out the private API that Tinder uses internally.

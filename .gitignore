@@ -3,6 +3,9 @@ bin/
 bin-debug/
 bin-release/
 node_modules/
+tmp/
+.env
+dump.json
 
 # Other files and folders
 .settings/
