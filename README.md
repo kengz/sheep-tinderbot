@@ -1,5 +1,5 @@
-# Sherry's-tinderbot
-A tinder bot for Sherry. Just for fun.
+# Sheep-tinderbot
+A tinder bot for sheep. Just for fun.
 
 ## Installation
 Make sure you have Node, npm and git installed.
