@@ -4,7 +4,9 @@
   "description": "tinder scraper for Sherry",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,8 @@
   "dependencies": {
     "lomath": "^0.2.2",
     "node-env-file": "^0.1.7",
-    "tinderjs": "^1.0.8"
-  }
+    "tinderjs": "^1.0.8",
+    "snyk": "^1.80.1"
+  },
+  "snyk": true
 }
